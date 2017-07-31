@@ -23,7 +23,7 @@ jinja_environment = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-            template = jinja_environment.get_template('templates/index.html')
+            template = jinja_environment.get_template('templates/form.html')
             self.response.out.write(template.render())
 
     def post(self):
@@ -32,8 +32,8 @@ class MainHandler(webapp2.RequestHandler):
         'movie': self.request.get('movie'),
         'weather': self.request.get('weather')}
 
-        template = jinja_environment.get_template('templates/page.html')
-            self.response.out.write(template.render(my_vars))
+        template = jinja_environment.get_template('templates/form.html')
+        self.response.out.write(template.render(my_vars))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
