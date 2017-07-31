@@ -4,16 +4,28 @@
     <meta charset="utf-8">
     <form method = 'post' action = ''>
     <title>Afternoon Adventures</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
+    <h1> Afternoon Adventures </h1>
     <form>
-      <input type="radio" name="weather" value="indoor">Indoor<br>
-      <input type="radio" name="weather" value="outdoor">Outdoor<br>
 
+      <select class="form-control" name = 'weather'>
+        <option>Indoor</option>
+        <option>Outdoor</option>
+      </select>
+      <br>
+
+      <!-- <input type="radio" name="weather" value="indoor">Indoor<br>
+      <input type="radio" name="weather" value="outdoor">Outdoor<br> -->
       <label for = 'activity'>What type of activity? </label><br>
-      <input type="checkbox" name="movie" value="movie">Movie<br>
-      <input type="checkbox" name="restaurant" value="restaurant">Restaurant<br>
 
+      <ul class="list-group">
+        <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> Movie</li>
+        <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> Restaurant</li><br>
+      </ul>
       <p><input type="submit" value="Submit"></p>
     </form>
   </body>
