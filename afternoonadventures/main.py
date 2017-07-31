@@ -28,8 +28,10 @@ class MainHandler(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
     def post(self):
-        restaurant = ['Cheesecake Factory', 'McDonalds', 'Red Robin']
-        movie = ['Dunkirk', 'Spider Man', 'Atomic Blonde']
+        restaurant = ['Cheesecake Factory', 'McDonalds', 'Red Robin',
+                        'Hard Wok Cafe', 'Five Guys', 'Panera', 'Chipotle']
+        movie = ['Dunkirk', 'Spider Man: Homecoming', 'Atomic Blonde',
+                    'Despicable Me 3', 'Cars 3', 'Wonder Woman']
 
         activities = {'weather': self.request.get('weather')}
 
