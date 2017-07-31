@@ -15,10 +15,25 @@
 # limitations under the License.
 #
 import webapp2
+import jinja2
+import os
+
+jinja_environment = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+            template = jinja_environment.get_template('templates/index.html')
+            self.response.out.write(template.render())
+
+    def post(self):
+        activities = {
+        'restaurant': self.request('restaurant'),
+        'movie': self.request.get('movie'),
+        'weather': self.request.get('weather')}
+
+        template = jinja_environment.get_template('templates/page.html')
+            self.response.out.write(template.render(my_vars))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
