@@ -28,7 +28,7 @@ class MainHandler(webapp2.RequestHandler):
 
     def post(self):
         activities = {
-        'restaurant': self.request('restaurant'),
+        'restaurant': self.request.get('restaurant'),
         'movie': self.request.get('movie'),
         'weather': self.request.get('weather')}
 
