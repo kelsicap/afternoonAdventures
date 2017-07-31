@@ -2,19 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-<<<<<<< HEAD
     <form method = 'post' action = ''>
-=======
-    <form method="post" action ="">
->>>>>>> 5f0eb517bbd3ca4a8bd7bbcbe0e59b025b3cc79b
     <title>Return</title>
   </head>
   <body>
-    <p>
-      The weather is {{ weather }} <br>
-      The restaurant is {{ restaurant }} <br>
-      The movie is {{ movie }}<br>
-    </p>
+    {% for activity in activities %}
+      {{ activities.activity }}
+    {% endfor %}
 
   </body>
 </html>

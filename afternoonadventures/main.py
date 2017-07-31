@@ -17,6 +17,7 @@
 import webapp2
 import jinja2
 import os
+import random
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -27,10 +28,16 @@ class MainHandler(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
     def post(self):
-        activities = {
-        'restaurant': self.request.get('restaurant'),
-        'movie': self.request.get('movie'),
-        'weather': self.request.get('weather')}
+        restaurant = ['Cheesecake Factory', 'McDonalds', 'Red Robin']
+        movie = ['Dunkirk', 'Spider Man', 'Atomic Blonde']
+
+        activities = {'weather': self.request.get('weather')}
+
+        if self.request.get('movie'):
+            activities['movie'] = random.choice(movie)
+
+        if self.request.get('restaurant'):
+            activities['restaurant'] = random.choice(restaurant)
 
         template = jinja_environment.get_template('templates/returns.html')
         self.response.out.write(template.render(activities))
