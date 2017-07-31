@@ -40,7 +40,7 @@ class MainHandler(webapp2.RequestHandler):
             activities['restaurant'] = random.choice(restaurant)
 
         template = jinja_environment.get_template('templates/returns.html')
-        self.response.out.write(template.render(activities))
+        self.response.out.write(template.render(activities = activities))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
