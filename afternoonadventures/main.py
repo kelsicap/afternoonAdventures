@@ -33,7 +33,7 @@ class MainHandler(webapp2.RequestHandler):
         'weather': self.request.get('weather')}
 
         template = jinja_environment.get_template('templates/returns.html')
-        self.response.out.write(template.render(my_vars))
+        self.response.out.write(template.render(activites))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
