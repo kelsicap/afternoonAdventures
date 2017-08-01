@@ -7,22 +7,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poiret%20One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anonymous%20Pro' rel='stylesheet'>
 
   </head>
-  <body>
+  <body class = 'container'>
     <style>
-      .choice {width: 100% }
-      #inChoice{display: none;}
+      #choice { width: 100%;
+                  margin-left: 30px}
       #outChoice{display:none;}
+      h1{ font-family: 'Poiret One';
+          font-weight: bold;
+          margin-left: 30px}
+      p{  margin-left: 30px;
+          letter-spacing: 3.84px}
     </style>
     <div class="jumbotron">
-      <h1>Afternoon Adventures</h1>
+      <h1>AFTERNOON ADVENTURES</h1>
       <p>Choose your own adventure!</p>
     </div>
 
-    <label for = 'activity'>What type of activity? </label><br>
-    <button type ='button' onclick="indoor()">Indoor</button>
-    <button type ='button' onclick="outdoor()">Outdoor</button>
+    <label for = 'activity' class = 'active'>What type of activity? </label><br>
+
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="#" onclick = 'indoor()'>Indoor</a></li>
+      <li role="presentation"><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
+    </ul>
 
 
     <script>
@@ -48,7 +58,6 @@
         }
     }
     </script>
-    <br>
 
 
     <!-- BEGIN FORM -->
@@ -59,22 +68,23 @@
         <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'outdoor'>Outdoor</button>
       </div> -->
 
-      <br>
       <!-- type of activity -->
-      <div id = 'inChoice'>
-        <ul class="list-group">
-          <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> Movie</li>
-          <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> Restaurant</li><br>
-        </ul>
-      </div>
+      <div class = 'choice'>
+        <div id = 'inChoice'>
+          <ul class="list-group">
+            <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> Movie</li>
+            <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> Restaurant</li><br>
+          </ul>
+        </div>
 
-      <div id = 'outChoice'>
-        <ul class="list-group">
-          <li class="list-group-item"><input type="checkbox" name="park" value="park"> Park</li>
-          <li class="list-group-item"><input type="checkbox" name="beach" value="beach"> Beach</li><br>
-        </ul>
-      </div>
-      <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+        <div id = 'outChoice'>
+          <ul class="list-group">
+            <li class="list-group-item"><input type="checkbox" name="park" value="park"> Park</li>
+            <li class="list-group-item"><input type="checkbox" name="beach" value="beach"> Beach</li><br>
+          </ul>
+        </div>
+        <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+    </div>
     </form>
 
 
