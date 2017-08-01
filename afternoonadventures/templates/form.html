@@ -7,30 +7,90 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </head>
   <body>
+    <style>
+      .choice {width: 100% }
+    </style>
     <div class="jumbotron">
       <h1>Afternoon Adventures</h1>
       <p>Choose your own adventure!</p>
     </div>
+
+
+
+
+
+
+
+    <style>
+    #inChoice{display: none;}
+    #outChoice{display:none;}
+    
+    </style>
+    <button type ='button' onclick="indoor()">Indoor</button>
+    <button type ='button' onclick="outdoor()">Outdoor</button>
+
+
+    <script>
+    function indoor() {
+        var i = document.getElementById('inChoice');
+        var o = document.getElementById('outChoice');
+        if (i.style.display === 'none') {
+            i.style.display = 'block';
+            o.style.display = 'none';
+        } else {
+            i.style.display = 'none';
+        }
+    }
+
+    function outdoor() {
+        var i = document.getElementById('inChoice');
+        var o = document.getElementById('outChoice');
+        if (o.style.display === 'none') {
+            o.style.display = 'block';
+            i.style.display = 'none';
+        } else {
+            o.style.display = 'none';
+        }
+    }
+    </script>
+
+
+    <!-- BEGIN FORM -->
     <form>
-
-      <select class="form-control" name = 'weather'>
-        <option>Indoor</option>
-        <option>Outdoor</option>
-      </select>
-      
+      <!-- indoor outdoor -->
+      <!-- <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'indoor'>Indoor</button>
+        <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'outdoor'>Outdoor</button>
+      </div> -->
+      <div class = 'door'>
+        <select class="form-control" name = 'weather'>
+          <option>Indoor</option>
+          <option>Outdoor</option>
+        </select>
+      </div>
       <br>
-
-      <!-- <input type="radio" name="weather" value="indoor">Indoor<br>
-      <input type="radio" name="weather" value="outdoor">Outdoor<br> -->
+      <!-- type of activity -->
       <label for = 'activity'>What type of activity? </label><br>
+      <div id = 'inChoice'>
+        <ul class="list-group">
+          <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> Movie</li>
+          <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> Restaurant</li><br>
+        </ul>
+      </div>
 
-      <ul class="list-group">
-        <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> Movie</li>
-        <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> Restaurant</li><br>
-      </ul>
+      <div id = 'outChoice'>
+        <ul class="list-group">
+          <li class="list-group-item"><input type="checkbox" name="park" value="park"> Park</li>
+          <li class="list-group-item"><input type="checkbox" name="beach" value="beach"> Beach</li><br>
+        </ul>
+      </div>
+
       <button type="submit" class="btn btn-warning btn-lg">Submit</button>
     </form>
+
+
   </body>
 </html>
