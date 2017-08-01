@@ -32,14 +32,23 @@ class MainHandler(webapp2.RequestHandler):
                         'Hard Wok Cafe', 'Five Guys', 'Panera', 'Chipotle']
         movie = ['Dunkirk', 'Spider Man: Homecoming', 'Atomic Blonde',
                     'Despicable Me 3', 'Cars 3', 'Wonder Woman']
+        park = ['Robinswood Park', 'Gas Works Park', 'Kerry Park',
+                'Volunteer Park']
+        beach = ['Alki Beach', 'Juanita Beach Park', 'Golden Gardens Park']
 
-        activities = {'weather': self.request.get('weather')}
+        activities = {}
 
         if self.request.get('movie'):
             activities['movie'] = random.choice(movie)
 
         if self.request.get('restaurant'):
             activities['restaurant'] = random.choice(restaurant)
+
+        if self.request.get('park'):
+            activities['park'] = random.choice(park)
+
+        if self.request.get('beach'):
+            activities['beach'] = random.choice(beach)
 
         template = jinja_environment.get_template('templates/returns.html')
         self.response.out.write(template.render(activities = activities))
