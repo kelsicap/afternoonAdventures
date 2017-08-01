@@ -9,13 +9,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1> Afternoon Adventures </h1>
+    <div class="jumbotron">
+      <h1>Afternoon Adventures</h1>
+      <p>Choose your own adventure!</p>
+    </div>
     <form>
 
       <select class="form-control" name = 'weather'>
         <option>Indoor</option>
         <option>Outdoor</option>
       </select>
+      
       <br>
 
       <!-- <input type="radio" name="weather" value="indoor">Indoor<br>
@@ -26,7 +30,7 @@
         <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> Movie</li>
         <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> Restaurant</li><br>
       </ul>
-      <p><input type="submit" value="Submit"></p>
+      <button type="submit" class="btn btn-warning btn-lg">Submit</button>
     </form>
   </body>
 </html>
