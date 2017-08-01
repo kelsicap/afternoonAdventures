@@ -75,6 +75,7 @@
         <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'outdoor'>Outdoor</button>
       </div> -->
 
+<<<<<<< HEAD
       <br>
       <!-- type of activity -->
       <div id = 'inChoice'>
@@ -84,6 +85,51 @@
         </ul>
       </div>
 
+=======
+    <script>
+    function indoor() {
+        var i = document.getElementById('inChoice');
+        var o = document.getElementById('outChoice');
+        if (i.style.display === 'none') {
+            i.style.display = 'block';
+            o.style.display = 'none';
+        } else {
+            i.style.display = 'none';
+        }
+    }
+
+    function outdoor() {
+        var i = document.getElementById('inChoice');
+        var o = document.getElementById('outChoice');
+        if (o.style.display === 'none') {
+            o.style.display = 'block';
+            i.style.display = 'none';
+        } else {
+            o.style.display = 'none';
+        }
+    }
+    </script>
+    <br>
+
+
+    <!-- BEGIN FORM -->
+    <form>
+      <!-- indoor outdoor -->
+      <!-- <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'indoor'>Indoor</button>
+        <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'outdoor'>Outdoor</button>
+      </div> -->
+
+      <br>
+      <!-- type of activity -->
+      <div id = 'inChoice'>
+        <ul class="list-group">
+          <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> Movie</li>
+          <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> Restaurant</li><br>
+        </ul>
+      </div>
+
+>>>>>>> cbdb22580ef8e9d03d37c83d67bf20451c0c3540
       <div id = 'outChoice'>
         <ul class="list-group">
           <li class="list-group-item"><input type="checkbox" name="park" value="park"> Park</li>
