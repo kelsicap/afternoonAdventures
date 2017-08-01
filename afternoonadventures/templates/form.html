@@ -8,17 +8,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poiret%20One' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Anonymous%20Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
 
   </head>
   <body class = 'container'>
     <style>
       #outChoice{display:none;}
       h1{ font-family: 'Poiret One';
-          font-weight: bold;
-          margin-left: 30px}
-      p{  margin-left: 30px;
-          letter-spacing: 3.84px}
+          font-weight: bold;}
+      p{ letter-spacing: 3.83px;
+          font-family: 'Cabin'}
+      body{ background-color: #FFFAD9}
+      .list-group-item{ background-color: #FFEDB0}
+      .active{ font-family: 'Cabin';
+               font-size: 25px; }
+      .door{ font-family: 'Cabin';
+             font-size: 20px;
+             color: #000000 }
+      #sub{ font-family: 'Poiret One'}
+
     </style>
     <div class="jumbotron">
       <h1>AFTERNOON ADVENTURES</h1>
@@ -27,9 +35,9 @@
 
     <label for = 'activity' class = 'active'>What type of activity? </label><br>
 
-    <ul class="nav nav-tabs">
-      <li role="presentation"><a href="#" onclick = 'indoor()'>Indoor</a></li>
-      <li role="presentation"><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
+    <ul class="nav nav-tabs nav-justified">
+      <li role="presentation" class = 'door'><a href="#" onclick = 'indoor()'>Indoor</a></li>
+      <li role="presentation" class = 'door'><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
     </ul>
 
 
@@ -67,21 +75,21 @@
       </div> -->
 
       <!-- type of activity -->
-      <div class = 'choice'>
+      <div class = 'door'>
         <div id = 'inChoice'>
           <ul class="list-group">
-            <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> Movie</li>
-            <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> Restaurant</li><br>
+            <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> &nbsp Movie</li>
+            <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> &nbsp Restaurant</li><br>
           </ul>
         </div>
 
         <div id = 'outChoice'>
           <ul class="list-group">
-            <li class="list-group-item"><input type="checkbox" name="park" value="park"> Park</li>
-            <li class="list-group-item"><input type="checkbox" name="beach" value="beach"> Beach</li><br>
+            <li class="list-group-item"><input type="checkbox" name="park" value="park"> &nbsp Park</li>
+            <li class="list-group-item"><input type="checkbox" name="beach" value="beach"> &nbsp Beach</li><br>
           </ul>
         </div>
-        <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+        <button type="submit" id = 'sub' class="btn btn-warning btn-lg">SUBMIT</button>
     </div>
     </form>
 
