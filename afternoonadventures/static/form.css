@@ -5,8 +5,8 @@
 
 
 p {
-  letter-spacing: 3.83px;
-  font-family: 'Cabin'
+  letter-spacing: 2.9px;
+  font-family: 'Carme'
 }
 
 html {
@@ -19,11 +19,11 @@ html {
 
 
 .active{
-  font-family: 'Cabin';
+  font-family: 'Carme';
   font-size: 25px;
 }
 .door{
-  font-family: 'Cabin';
+  font-family: 'Carme';
   font-size: 20px;
   color: #000000
 }

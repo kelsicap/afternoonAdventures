@@ -32,24 +32,39 @@ class MainHandler(webapp2.RequestHandler):
                         'Hard Wok Cafe', 'Five Guys', 'Panera', 'Chipotle']
         movie = ['Dunkirk', 'Spider Man: Homecoming', 'Atomic Blonde',
                     'Despicable Me 3', 'Cars 3', 'Wonder Woman']
+        boba = ['Drive Thru Boba', 'Oasis', 'Young Tea', 'ShareTea',
+                'Tapioca Express']
+        books = ['Barnes and Noble', 'Half Price Books', 'University Book Store',
+                'Kirkland Library', 'Bellevue Library']
+
+
         park = ['Robinswood Park', 'Gas Works Park', 'Kerry Park',
                 'Volunteer Park', 'Bellevue Botanical Garden']
         beach = ['Alki Beach', 'Juanita Beach Park', 'Golden Gardens Park'
                     'Gene Coulon Beach Park', 'Newcastle Beach Park']
+        hike = ['Rattlesnake Lake', 'Poo Poo Point', 'Cougar Mountain']
+        tourist = ['Space Needle', 'Pike Place Market', 'Seattle Waterfront',
+                    'Gum Wall']
 
         activities = {}
 
         if self.request.get('movie'):
             activities['Movie'] = random.choice(movie)
-
         if self.request.get('restaurant'):
             activities['Restaurant'] = random.choice(restaurant)
+        if self.request.get('boba'):
+            activities['Boba'] = random.choice(boba)
+        if self.request.get('books'):
+            activities['Books'] = random.choice(books)
 
         if self.request.get('park'):
             activities['Park'] = random.choice(park)
-
         if self.request.get('beach'):
             activities['Beach'] = random.choice(beach)
+        if self.request.get('hike'):
+            activities['Hike'] = random.choice(hike)
+        if self.request.get('tourist'):
+            activities['Tourist'] = random.choice(tourist)
 
         template = jinja_environment.get_template('templates/returns.html')
         self.response.out.write(template.render(activities = activities))
