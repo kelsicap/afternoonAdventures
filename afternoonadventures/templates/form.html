@@ -16,7 +16,8 @@
 
     <style>
     .list-group-item {background-color: #FFC259;
-                      border-color: #FFE4B5}
+                      border-color: #FFE4B5;
+                      border-width: 2px}
     h1 {
       font-family: 'Poiret One';
       font-weight: bold;
@@ -87,20 +88,6 @@
       </nav>
     </div>
 
-
-    <div class="jumbotron">
-      <h1>AFTERNOON ADVENTURES</h1>
-      <p>Choose your own adventure!</p>
-    </div>
-
-    <label for = 'activity' class = 'active'>What type of activity? </label><br>
-
-    <ul class="nav nav-tabs nav-justified">
-      <li role="presentation" class = 'door'><a href="#" onclick = 'indoor()'>Indoor</a></li>
-      <li role="presentation" class = 'door'><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
-    </ul>
-
-
     <script>
     function indoor() {
         var i = document.getElementById('inChoice');
@@ -124,6 +111,21 @@
         }
     }
     </script>
+
+    <div class="jumbotron">
+      <h1>AFTERNOON ADVENTURES</h1>
+      <p>Choose your own adventure!</p>
+    </div>
+
+    <label for = 'activity' class = 'active'>WHAT TYPE OF ACTIVITY? </label><br>
+
+    <ul class="nav nav-tabs nav-justified">
+      <li role="presentation" class = 'door'><a href="#" onclick = 'indoor()'>Indoor</a></li>
+      <li role="presentation" class = 'door'><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
+    </ul>
+
+
+
 
 
     <!-- BEGIN FORM -->

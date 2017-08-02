@@ -19,8 +19,9 @@ html {
 
 
 .active{
-  font-family: 'Carme';
+  font-family: 'Poiret One';
   font-size: 25px;
+  color: #FFE4B5;
 }
 .door{
   font-family: 'Carme';
