@@ -1,0 +1,42 @@
+#outChoice {
+  display:none;
+}
+
+h1{
+  font-family: 'Poiret One';
+  font-weight: bold;
+}
+
+p {
+  letter-spacing: 3.83px;
+  font-family: 'Cabin'
+}
+
+html {
+  background-color: #FFFAD9
+}
+
+.container {
+  background-color: #FFFAD9
+}
+
+
+.active{
+  font-family: 'Cabin';
+  font-size: 25px;
+}
+.door{
+  font-family: 'Cabin';
+  font-size: 20px;
+  color: #000000
+}
+
+#sub {
+  font-family: 'Poiret One';
+  text-align: center
+}
+.bar{
+  font-family: 'Poiret One';
+  font-weight: bold;
+  font-size: 17px;
+}

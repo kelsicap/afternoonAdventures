@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <form method = 'post' action = ''>
     <title>Afternoon Adventures</title>
+    <link rel="stylesheet" type="text/css" href="styles/form.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -12,22 +13,62 @@
 
   </head>
   <body class = 'container'>
-    <style>
-      #outChoice{display:none;}
-      h1{ font-family: 'Poiret One';
-          font-weight: bold;}
-      p{ letter-spacing: 3.83px;
-          font-family: 'Cabin'}
-      body{ background-color: #FFFAD9}
-      .list-group-item{ background-color: #FFEDB0}
-      .active{ font-family: 'Cabin';
-               font-size: 25px; }
-      .door{ font-family: 'Cabin';
-             font-size: 20px;
-             color: #000000 }
-      #sub{ font-family: 'Poiret One'}
 
+    <style>
+    .list-group-item { background-color: #FFEDB0}
+
+    .list-group-item{ border-color: #FF6347}
+
+    .navbar-default {
+      background-color: #FFEDB0;
+      border-color: #FF6347;
+    }
+    /* Title */
+    .navbar-default .navbar-brand {
+        color: #FF6347;
+    }
+    .navbar-default .navbar-brand:hover,
+    .navbar-default .navbar-brand:focus {
+        color: #FF6347;
+    }
+    /* Link */
+    .navbar-default .navbar-nav > li > a {
+        color: #FFEDB0;
+    }
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+        color: #FFEDB0;
+    }
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: #FFEDB0;
+        background-color: #FFEDB0;
+    }
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open > a:focus {
+        color: #FFEDB0;
+        background-color: #FFEDB0;
+    }
     </style>
+
+
+    <div class = 'bar'>
+      <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">replace with icon</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
     <div class="jumbotron">
       <h1>AFTERNOON ADVENTURES</h1>
       <p>Choose your own adventure!</p>
@@ -85,8 +126,8 @@
 
         <div id = 'outChoice'>
           <ul class="list-group">
-            <li class="list-group-item"><input type="checkbox" name="park" value="park"> &nbsp Park</li>
-            <li class="list-group-item"><input type="checkbox" name="beach" value="beach"> &nbsp Beach</li><br>
+            <li class="list-group-item"><input type="checkbox" class = 'item' name="park" value="park"> &nbsp Park</li>
+            <li class="list-group-item"><input type="checkbox" class = 'item' name="beach" value="beach"> &nbsp Beach</li><br>
           </ul>
         </div>
         <button type="submit" id = 'sub' class="btn btn-warning btn-lg">SUBMIT</button>

@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color: 	red;
+    font-family: 'Poiret One';
+}
+#activity{
+  color: #FF6347;
+  font-family: 'Cabin';
+
+}
+#item{
+  text-decoration: underline;
+  text-indent: 50px;
+  font-family: 'Cabin';
+  color: #C71585;
+  font-weight: bold;
+}
+html{
+  background-color: #FFFAD9;
+
+}
