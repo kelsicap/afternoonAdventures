@@ -9,65 +9,27 @@
     <link href="styles/returns.css" type="text/css" rel="stylesheet">
     <!-- <form method = 'post' action = ''> -->
     <title>Afternoon Adventures</title>
-    <style>
-    /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 500px;
-        width: 600px;
-        float: inherit;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .controls {
-        background-color: #fff;
-        border-radius: 2px;
-        border: 1px solid transparent;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        height: 29px;
-        margin-left: 17px;
-        margin-top: 10px;
-        outline: none;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-        width: 400px;
-      }
 
-      .controls:focus {
-        border-color: #4d90fe;
-      }
-      .title {
-        font-weight: bold;
-      }
-      #infowindow-content {
-        display: none;
-      }
-      #map #infowindow-content {
-        display: inline;
-      }
-    </style>
     <body class = 'container'>
-      
-      <div class = 'wrapper'>
-      <div id = 'words'>
-      <h1> Here's a list of recommended activities! Have fun adventuring!</h1>
-        {% for activity in activities %}
-          <h3><div id='activity'>{{ activity }}:</h3> </div>
-          <div id= 'item'> {{activities[activity]}}</div><br>
-          <div id = 'address'> If you are unsure of the address, feel free to look it up!</div>
-        {% endfor %}
-      </div>
 
-          <div id="map"></div>
-        </div>
+      <div class = 'wrapper'>
+
+          <h1> HERE'S A LIST OF RECOMMENDED ACTIVITIES! HAVE FUN ADVENTURING!</h1>
+          <div id = 'words'>
+            {% for activity in activities %}
+            <div class = 'card'>
+              <h2>{{ activity }}:</h2>
+              <h3>{{activities[activity]}}</h3><br>
+            </div>
+            {% endfor %}
+          </div>
+
+          <br>
+        <div class = 'mmap'>
+        <div id="map"></div>
+        <h4> Unsure of a location? Search for its address!</h4>
+      </div>
+      </div>
   </body>
     <body>
       <input id="pac-input" class="controls" type="text"

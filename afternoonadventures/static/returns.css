@@ -1,6 +1,8 @@
 h1{
     text-align: center;
-    color: 	red;
+    color: #404040;
+    font-weight: 900;
+    text-shadow: -0.3px 0 #FFE4B5, 0 0.3px #FFE4B5, 0.3px 0 #FFE4B5, 0 -0.3px #FFE4B5;
     font-family: 'Poiret One';
 }
 #activity{
@@ -8,21 +10,103 @@ h1{
   font-family: 'Carme';
 
 }
+
+.controls {
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  height: 29px;
+  margin-left: 17px;
+  margin-top: 10px;
+  outline: none;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+.controls:focus {
+  border-color: #4d90fe;
+}
+.title {
+  font-weight: bold;
+}
+#infowindow-content {
+  display: none;
+}
+#map #infowindow-content {
+  display: inline;
+}
+
 #item{
   text-decoration: underline;
   text-indent: 50px;
   font-family: 'Carme';
-  color: #C71585;
+  color: #FFC259;
   font-weight: bold;
-}
-html{
-  background-color: #FFFAD9;
-
 }
 
 .wrapper{
-  width: 1200px;
+  width: 100%;
   margin: auto;
+}
+#map {
+  height: 500px;
+  width: 600px;
+}
+
+.mmap{
+  float: right;
+}
+
+h4 {
+  color: #404040;
+  font-size: 25px;
+  text-align: center;
+  font-weight: normal;
+  text-shadow: -0.3px 0 #FFE4B5, 0 0.3px #FFE4B5, 0.3px 0 #FFE4B5, 0 -0.3px #FFE4B5;
+}
+
+#words{
+  height: 300px;
+  width: 500px;
+  float: left;
+
+}
+
+h2 {
+  font-family: 'Carme';
+  color: #FFC259;
+}
+
+h3 {
+  font-family: 'Carme';
+  color: #FFE4B5;
+  font-size: 20px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    height: 50%;
+    float: left;
+    margin: 10px;;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.con {
+    padding: 2px 16px;
+    margin: 6px
 }
 
 #address{
@@ -34,7 +118,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #404040;
+    background-image: url('https://www.walldevil.com/wallpapers/a21/sunset-sky-cloud-sea-mountain.jpg');
   }
 
 .navbar-default {
