@@ -8,15 +8,14 @@
     <link href='https://fonts.googleapis.com/css?family=Carme' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="styles/returns.css" type="text/css" rel="stylesheet">
-    <meta charset="utf-8">
-    <form method = 'post' action = ''>
+    <!-- <form method = 'post' action = ''> -->
     <title>Return</title>
     <style>
-      /* Always set the map height explicitly to define the size of the div
+    /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 500px;
-        width:
+        width: 600px;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -24,59 +23,131 @@
         margin: 0;
         padding: 0;
       }
+      .controls {
+        background-color: #fff;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        height: 29px;
+        margin-left: 17px;
+        margin-top: 10px;
+        outline: none;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      .controls:focus {
+        border-color: #4d90fe;
+      }
+      .title {
+        font-weight: bold;
+      }
+      #infowindow-content {
+        display: none;
+      }
+      #map #infowindow-content {
+        display: inline;
+      }
     </style>
+    <body class = 'container'>
+      <h1> Here's a list of recommended activities! Have fun adventuring!</h1>
+        {% for activity in activities %}
+          <h3><div id='activity'>{{ activity }}:</h3> </div>
+          <div id= 'item'> {{activities[activity]}} </div><br>
+        {% endfor %}
+
+          <div id="map"></div>
+  </body>
+    <body>
+      <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <span id="place-name"  class="title"></span><br>
+      Place ID <span id="place-id"></span><br>
+      <span id="place-address"></span>
+    </div>
     <script>
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
       function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 47.628538, lng: -122.202760},
-          zoom: 15
-        });
+       var map = new google.maps.Map(document.getElementById('map'), {
+         center: {lat: -33.8688, lng: 151.2195},
+         zoom: 13
+       });
 
-        var infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
+       var input = document.getElementById('pac-input');
 
-        service.getDetails({
-          placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
-        }, function(place, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            var marker = new google.maps.Marker({
-              map: map,
-              position: {lat: 47.628538 , lng: -122.202760}
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-              infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-                'Place ID: ' + place.place_id + '<br>' +
-                place.formatted_address + '</div>');
-              infowindow.open(map, this);
-            });
-          }
-        });
-      }
-    </script>
-<script>
-var map;
+       var autocomplete = new google.maps.places.Autocomplete(input);
+       autocomplete.bindTo('bounds', map);
 
+       map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
+       var infowindow = new google.maps.InfoWindow();
+       var infowindowContent = document.getElementById('infowindow-content');
+       infowindow.setContent(infowindowContent);
+       var marker = new google.maps.Marker({
+         map: map
+       });
+       marker.addListener('click', function() {
+         infowindow.open(map, marker);
+       });
 
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-  </head>
-  <body class = 'container'>
-    <h1> Here's a list of recommended activities! Have fun adventuring!</h1>
-    {% for activity in activities %}
-      <h3><div id='activity'>{{ activity }}:</h3> </div>
-      <div id= 'item'> {{activities[activity]}} </div><br>
-    {% endfor %}
+<<<<<<< HEAD
+       autocomplete.addListener('place_changed', function() {
+         infowindow.close();
+         var place = autocomplete.getPlace();
+         if (!place.geometry) {
+           return;
+         }
+=======
 
-     <div id="map"></div>
-     <!-- AIzaSyAONcW6_5CMWuJLinf2yll5d0wIauHff2s -->
+>>>>>>> 6ec9bd5b1d1a8852f9218aaf794e8257f277d6d5
+
+         if (place.geometry.viewport) {
+           map.fitBounds(place.geometry.viewport);
+         } else {
+           map.setCenter(place.geometry.location);
+           map.setZoom(17);
+         }
+
+         // Set the position of the marker using the place ID and location.
+         marker.setPlace({
+           placeId: place.place_id,
+           location: place.geometry.location
+         });
+         marker.setVisible(true);
+
+         infowindowContent.children['place-name'].textContent = place.name;
+         infowindowContent.children['place-id'].textContent = place.place_id;
+         infowindowContent.children['place-address'].textContent =
+             place.formatted_address;
+         infowindow.open(map, marker);
+       });
+     }
+     </script>
      <script async defer
        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAONcW6_5CMWuJLinf2yll5d0wIauHff2s&libraries=places&callback=initMap">
      </script>
+<<<<<<< HEAD
+   </body>
+    </head>
+    <!-- <body class = 'container'>
+      <h1> Here's a list of recommended activities! Have fun adventuring!</h1>
+        {% for activity in activities %}
+          <h3><div id='activity'>{{ activity }}:</h3> </div>
+          <div id= 'item'> {{activities[activity]}} </div><br>
+        {% endfor %}
+
+          <div id="map"></div>
+  </body> -->
+=======
 
      <div class = 'bar'>
        <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -93,5 +164,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
        </nav>
      </div>
   </body>
+>>>>>>> 6ec9bd5b1d1a8852f9218aaf794e8257f277d6d5
 
   </html>
