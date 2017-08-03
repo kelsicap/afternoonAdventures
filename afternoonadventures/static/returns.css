@@ -19,9 +19,12 @@ html{
   background-color: #FFFAD9;
 
 }
-#map {
-    height: 100%;
-  }
+
+.wrapper{
+  width: 1200px;
+  margin: auto;
+}
+
 #address{
   font-family: 'Carme';
   color: #FF7F50;
@@ -31,6 +34,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #404040;
   }
 
 .navbar-default {
