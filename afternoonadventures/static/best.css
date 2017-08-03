@@ -13,7 +13,7 @@ header{
     text-align: left;
 }
 
-.annoying {
+nav {
     float: left;
     max-width: 140px;
     margin: 5;
@@ -42,19 +42,17 @@ body h1 {
   color: #DE8B2C;
   background-color: #404040;
 }
-<<<<<<< HEAD
-=======
 .navbar-default {
   background-color: #FFC259;
   border-color: #FFE4B5;
 }
 /* Title */
 .navbar-default .navbar-brand {
-    /*color: #FFF1D9;*/
+    color: #FFF1D9;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #FFF1D9;
+    /*color: #FFF1D9;*/
 }
 /* Link */
 .navbar-default .navbar-nav > li > a {
@@ -96,4 +94,3 @@ body h1 {
   font-weight: bold;
   font-size: 20px;
 }
->>>>>>> 8becd696ce39ff984d2554b34d7056038d422ce8
