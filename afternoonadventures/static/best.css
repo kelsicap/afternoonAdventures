@@ -13,7 +13,7 @@ header{
     text-align: left;
 }
 
-nav {
+.annoying {
     float: left;
     max-width: 140px;
     margin: 5;
@@ -34,7 +34,7 @@ article {
     /*border-left: 30px solid white;*/
     padding: 1em;
     overflow: hidden;
-    color: #FFE4B5
+    color: #FFE4B5;
 }
 body h1 {
   font-family: 'Poiret One';
@@ -52,7 +52,7 @@ body h1 {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    /*color: #FFF1D9;*/
+    color: #FFF1D9;
 }
 /* Link */
 .navbar-default .navbar-nav > li > a {
