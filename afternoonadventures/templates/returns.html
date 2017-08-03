@@ -99,16 +99,13 @@
          infowindow.open(map, marker);
        });
 
-<<<<<<< HEAD
+
        autocomplete.addListener('place_changed', function() {
          infowindow.close();
          var place = autocomplete.getPlace();
          if (!place.geometry) {
            return;
          }
-=======
-
->>>>>>> 6ec9bd5b1d1a8852f9218aaf794e8257f277d6d5
 
          if (place.geometry.viewport) {
            map.fitBounds(place.geometry.viewport);
@@ -147,7 +144,7 @@
 
           <div id="map"></div>
   </body> -->
-=======
+
 
      <div class = 'bar'>
        <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -164,6 +161,6 @@
        </nav>
      </div>
   </body>
->>>>>>> 6ec9bd5b1d1a8852f9218aaf794e8257f277d6d5
+
 
   </html>
