@@ -1,17 +1,11 @@
 html {
-  background-image: url('http://natbg.com/wp-content/uploads/2016/09/sunsets-sailboat-golden-sunset-zakat-ozero-lodka-peyzazh-nature-gold-sun-sky-sunsets-full-hd-wallpaper-1920x1080.jpg');
-
+  /*background-image: url('http://natbg.com/wp-content/uploads/2016/09/sunsets-sailboat-golden-sunset-zakat-ozero-lodka-peyzazh-nature-gold-sun-sky-sunsets-full-hd-wallpaper-1920x1080.jpg');*/
+  background-color: #404040
 }
 div.container {
     width: 100%;
     background-color: #404040;
     height: 100%
-}
-.container{
-  height: 100%
-}
-body{
-  height:100%
 }
 
 header{
@@ -51,7 +45,7 @@ article {
 p{
   color: #FFE4B5;
 }
-body h1 {
+h1 {
   font-family: 'Poiret One';
   font-weight: bold;
   color: #DE8B2C;
@@ -59,6 +53,8 @@ body h1 {
 }
 body {
   background-color: #404040;
+  height: 100%;
+  width: 100%;
 }
 .navbar-default {
   background-color: #FFC259;
