@@ -13,7 +13,7 @@ header{
     text-align: left;
 }
 
-nav {
+.annoying {
     float: left;
     max-width: 140px;
     margin: 5;
@@ -38,56 +38,4 @@ article {
 h1 {
   font-family: 'Poiret One';
   font-weight: bold;
-}
-.navbar-default {
-  background-color: #FFC259;
-  border-color: #FFE4B5;
-}
-/* Title */
-.navbar-default .navbar-brand {
-    color: #FFF1D9;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: #FFF1D9;
-}
-/* Link */
-.navbar-default .navbar-nav > li > a {
-    color: #FFF1D9;
-    font-weight: bold;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #822110;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #FF6347;
-    background-color: #822110;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-    color: #FFC259;
-    background-color: #FFC259;
-}
-.nav-tabs a{ color: #FFE4B5}
-.nav-tabs > li > a:hover{
-  background-color: #303136 !important;
-    border: medium none;
-    border-radius: 0;
-    color:#fff;
-}
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus{
-    color: #555555;
-    background-color: red;
-}
-
-.bar{
-  font-family: 'Poiret One';
-  font-weight: bold;
-  font-size: 20px;
 }
