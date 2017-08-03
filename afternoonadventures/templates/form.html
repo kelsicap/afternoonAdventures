@@ -70,6 +70,7 @@
             background-color: red;
         }
 
+
     </style>
 
 
@@ -117,48 +118,54 @@
       <p>Choose your own adventure!</p>
     </div>
 
-    <label for = 'activity' class = 'active'>WHAT TYPE OF ACTIVITY? </label><br>
-
-    <ul class="nav nav-tabs nav-justified">
-      <li role="presentation" class = 'door'><a href="#" onclick = 'indoor()'>Indoor</a></li>
-      <li role="presentation" class = 'door'><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
-    </ul>
 
 
+<div class = 'wrapper'>
+    <div class = 'big'>
+      <label for = 'activity' class = 'active'>WHAT TYPE OF ACTIVITY? </label><br><br>
+      <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" class = 'door'><a href="#" onclick = 'indoor()'>Indoor</a></li>
+        <li role="presentation" class = 'door'><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
+      </ul>
 
+      <!-- BEGIN FORM -->
+      <form>
+        <!-- indoor outdoor -->
+        <!-- <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'indoor'>Indoor</button>
+          <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'outdoor'>Outdoor</button>
+        </div> -->
 
+        <!-- type of activity -->
+        <div class = 'door'>
+          <div id = 'inChoice'>
+            <ul class="list-group">
+              <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> &nbsp Movie</li>
+              <li class="list-group-item"><input type="checkbox" name="boba" value="boba"> &nbsp Boba</li>
+              <li class="list-group-item"><input type="checkbox" name="books" value="books"> &nbsp Books</li>
+              <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> &nbsp Restaurant</li><br>
+            </ul>
+          </div>
 
-    <!-- BEGIN FORM -->
-    <form>
-      <!-- indoor outdoor -->
-      <!-- <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'indoor'>Indoor</button>
-        <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'outdoor'>Outdoor</button>
-      </div> -->
-
-      <!-- type of activity -->
-      <div class = 'door'>
-        <div id = 'inChoice'>
-          <ul class="list-group">
-            <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> &nbsp Movie</li>
-            <li class="list-group-item"><input type="checkbox" name="boba" value="boba"> &nbsp Boba</li>
-            <li class="list-group-item"><input type="checkbox" name="books" value="books"> &nbsp Books</li>
-            <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> &nbsp Restaurant</li><br>
-          </ul>
-        </div>
-
-        <div id = 'outChoice'>
-          <ul class="list-group">
-            <li class="list-group-item"><input type="checkbox" class = 'item' name="park" value="park"> &nbsp Park</li>
-            <li class="list-group-item"><input type="checkbox" class = 'item' name="hiking" value="hiking"> &nbsp Hiking Trails</li>
-            <li class="list-group-item"><input type="checkbox" class = 'item' name="tourist" value="tourist"> &nbsp Tourist Locations</li>
-            <li class="list-group-item"><input type="checkbox" class = 'item' name="beach" value="beach"> &nbsp Beach</li><br>
-          </ul>
-        </div>
-        <button type="submit" id = 'sub' class="btn btn-warning btn-lg">SUBMIT</button>
+          <div id = 'outChoice'>
+            <ul class="list-group">
+              <li class="list-group-item"><input type="checkbox" class = 'item' name="park" value="park"> &nbsp Park</li>
+              <li class="list-group-item"><input type="checkbox" class = 'item' name="hiking" value="hiking"> &nbsp Hiking Trails</li>
+              <li class="list-group-item"><input type="checkbox" class = 'item' name="tourist" value="tourist"> &nbsp Tourist Locations</li>
+              <li class="list-group-item"><input type="checkbox" class = 'item' name="beach" value="beach"> &nbsp Beach</li><br>
+            </ul>
+          </div>
+          <button type="submit" id = 'sub' class="btn btn-warning btn-lg">SUBMIT</button>
+      </div>
+      </form>
     </div>
-    </form>
 
 
+    <div id = 'side'>
+      <p>ANNE IS THE COOLEST PERSON EVER WOO I LOVE HER ** ANNE IS THE COOLEST PERSON EVER WOO I LOVE HER ** ANNE IS THE COOLEST PERSON EVER WOO I LOVE HER ** ANNE IS THE COOLEST PERSON EVER WOO I LOVE HER</p>
+    </div>
+
+
+</div>
   </body>
 </html>
