@@ -70,14 +70,14 @@ html, body {
       color:#fff;
   }
   .nav-tabs > li.active > a,
-      .nav-tabs > li.active > a:hover,
-      .nav-tabs > li.active > a:focus{
-          color: #555555;
-          background-color: red;
-      }
+  .nav-tabs > li.active > a:hover,
+  .nav-tabs > li.active > a:focus{
+      color: #555555;
+      background-color: red;
+  }
 
-      .bar{
-        font-family: 'Poiret One';
-        font-weight: bold;
-        font-size: 20px;
-      }
+.bar{
+  font-family: 'Poiret One';
+  font-weight: bold;
+  font-size: 20px;
+}
