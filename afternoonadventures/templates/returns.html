@@ -5,7 +5,8 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Carme' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="styles/returns.css" type="text/css" rel="stylesheet">
     <!-- <form method = 'post' action = ''> -->
     <title>Return</title>
@@ -98,12 +99,16 @@
          infowindow.open(map, marker);
        });
 
+<<<<<<< HEAD
        autocomplete.addListener('place_changed', function() {
          infowindow.close();
          var place = autocomplete.getPlace();
          if (!place.geometry) {
            return;
          }
+=======
+
+>>>>>>> 6ec9bd5b1d1a8852f9218aaf794e8257f277d6d5
 
          if (place.geometry.viewport) {
            map.fitBounds(place.geometry.viewport);
@@ -130,6 +135,7 @@
      <script async defer
        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAONcW6_5CMWuJLinf2yll5d0wIauHff2s&libraries=places&callback=initMap">
      </script>
+<<<<<<< HEAD
    </body>
     </head>
     <!-- <body class = 'container'>
@@ -141,5 +147,23 @@
 
           <div id="map"></div>
   </body> -->
+=======
+
+     <div class = 'bar'>
+       <nav class="navbar navbar-default navbar-fixed-bottom">
+         <div class="container-fluid">
+           <div class="navbar-header">
+             <a class="navbar-brand" href="#">
+               <img src='http://balithisweek.com/wp-content/uploads/2015/11/icon-for-sunset.png' alt='icon' style="width:30px;height:30px;"></a>
+           </div>
+           <ul class="nav navbar-nav">
+             <li><a href="/">HOME</a></li>
+             <li><a href="/about">ABOUT</a></li>
+           </ul>
+         </div>
+       </nav>
+     </div>
+  </body>
+>>>>>>> 6ec9bd5b1d1a8852f9218aaf794e8257f277d6d5
 
   </html>

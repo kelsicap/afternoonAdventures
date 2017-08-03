@@ -2,11 +2,28 @@
   display:none;
 }
 
+.jumbotron{
+  background-image: url('http://www.321relaxing.com/wp-content/uploads/2016/07/Golden-Sunset-Ocean-2.jpg');
+  text-shadow: -0.3px 0 #FFE4B5, 0 0.3px #FFE4B5, 0.3px 0 #FFE4B5, 0 -0.3px #FFE4B5;
+}
 
-
-p {
+#header {
   letter-spacing: 2.9px;
-  font-family: 'Carme'
+  font-family: 'Carme';
+  font-weight: 900;
+}
+
+#blurbtitle {
+  font-family: 'Poiret One';
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px;
+}
+
+#stuff {
+  font-family: 'Carme';
+  padding: 10px;
+  font-size: 25px;
 }
 
 html {
@@ -22,9 +39,9 @@ html {
 }
 
 #side {
-  width: 250px;
+  width: 20%;
   height: 450px;
-  background-color: white;
+  background: linear-gradient(to bottom right, white, #FFC259);
   margin-top: -391px;
   margin-left: 890px;
   float: inherit;

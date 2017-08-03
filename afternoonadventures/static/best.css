@@ -1,33 +1,44 @@
-h1{
-    text-align: center;
-    color: 	red;
-    font-family: 'Poiret One';
+div.container {
+    width: 100%;
+    border: 1px solid clear;
 }
-#activity{
-  color: #FF6347;
-  font-family: 'Carme';
+body{
+    background-color: white;
+}
+header{
+    padding: 1em;
+    color: white;
+    background-color: white;
+    clear: left;
+    text-align: left;
+}
 
+nav {
+    float: left;
+    max-width: 140px;
+    margin: 5;
+    padding: 0em;
 }
-#item{
-  text-decoration: underline;
-  text-indent: 50px;
-  font-family: 'Carme';
-  color: #C71585;
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 30px solid white;
+    padding: 1em;
+    overflow: hidden;
+}
+h1 {
+  font-family: 'Poiret One';
   font-weight: bold;
 }
-html{
-  background-color: #FFFAD9;
-
-}
-#map {
-    height: 100%;
-  }
-  /* Optional: Makes the sample page fill the window. */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
 
 .navbar-default {
   background-color: #FFC259;
