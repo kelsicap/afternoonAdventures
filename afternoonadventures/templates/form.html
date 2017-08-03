@@ -9,14 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poiret%20One' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Carme' rel='stylesheet'>
 
   </head>
   <body class = 'container'>
 
     <style>
     .list-group-item {background-color: #FFC259;
-                      border-color: #FFE4B5}
+                      border-color: #FFE4B5;
+                      border-width: 2px}
     h1 {
       font-family: 'Poiret One';
       font-weight: bold;
@@ -55,6 +56,21 @@
         color: #FFC259;
         background-color: #FFC259;
     }
+    .nav-tabs a{ color: #FFE4B5}
+    .nav-tabs > li > a:hover{
+      background-color: #303136 !important;
+        border: medium none;
+        border-radius: 0;
+        color:#fff;
+    }
+    .nav-tabs > li.active > a,
+        .nav-tabs > li.active > a:hover,
+        .nav-tabs > li.active > a:focus{
+            color: #555555;
+            background-color: red;
+        }
+
+
     </style>
 
 
@@ -62,7 +78,8 @@
       <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">replace with icon</a>
+            <a class="navbar-brand" href="#">
+              <img src='http://balithisweek.com/wp-content/uploads/2015/11/icon-for-sunset.png' alt='icon' style="width:30px;height:30px;"></a>
           </div>
           <ul class="nav navbar-nav">
             <li><a href="#">HOME</a></li>
@@ -71,20 +88,6 @@
         </div>
       </nav>
     </div>
-
-
-    <div class="jumbotron">
-      <h1>AFTERNOON ADVENTURES</h1>
-      <p>Choose your own adventure!</p>
-    </div>
-
-    <label for = 'activity' class = 'active'>What type of activity? </label><br>
-
-    <ul class="nav nav-tabs nav-justified">
-      <li role="presentation" class = 'door'><a href="#" onclick = 'indoor()'>Indoor</a></li>
-      <li role="presentation" class = 'door'><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
-    </ul>
-
 
     <script>
     function indoor() {
@@ -110,33 +113,59 @@
     }
     </script>
 
-
-    <!-- BEGIN FORM -->
-    <form>
-      <!-- indoor outdoor -->
-      <!-- <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'indoor'>Indoor</button>
-        <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'outdoor'>Outdoor</button>
-      </div> -->
-
-      <!-- type of activity -->
-      <div class = 'door'>
-        <div id = 'inChoice'>
-          <ul class="list-group">
-            <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> &nbsp Movie</li>
-            <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> &nbsp Restaurant</li><br>
-          </ul>
-        </div>
-
-        <div id = 'outChoice'>
-          <ul class="list-group">
-            <li class="list-group-item"><input type="checkbox" class = 'item' name="park" value="park"> &nbsp Park</li>
-            <li class="list-group-item"><input type="checkbox" class = 'item' name="beach" value="beach"> &nbsp Beach</li><br>
-          </ul>
-        </div>
-        <button type="submit" id = 'sub' class="btn btn-warning btn-lg">SUBMIT</button>
+    <div class="jumbotron">
+      <h1>AFTERNOON ADVENTURES</h1>
+      <p>Choose your own adventure!</p>
     </div>
-    </form>
 
+
+
+<div class = 'wrapper'>
+    <div class = 'big'>
+      <label for = 'activity' class = 'active'>WHAT TYPE OF ACTIVITY? </label><br><br>
+      <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" class = 'door'><a href="#" onclick = 'indoor()'>Indoor</a></li>
+        <li role="presentation" class = 'door'><a href="#" onclick = 'outdoor()'>Outdoor</a></li>
+      </ul>
+
+      <!-- BEGIN FORM -->
+      <form>
+        <!-- indoor outdoor -->
+        <!-- <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'indoor'>Indoor</button>
+          <button type="button" class="btn btn-default btn-group-lg" name = 'weather' value = 'outdoor'>Outdoor</button>
+        </div> -->
+
+        <!-- type of activity -->
+        <div class = 'door'>
+          <div id = 'inChoice'>
+            <ul class="list-group">
+              <li class="list-group-item"><input type="checkbox" name="movie" value="movie"> &nbsp Movie</li>
+              <li class="list-group-item"><input type="checkbox" name="boba" value="boba"> &nbsp Boba</li>
+              <li class="list-group-item"><input type="checkbox" name="books" value="books"> &nbsp Books</li>
+              <li class="list-group-item"><input type="checkbox" name="restaurant" value="restaurant"> &nbsp Restaurant</li><br>
+            </ul>
+          </div>
+
+          <div id = 'outChoice'>
+            <ul class="list-group">
+              <li class="list-group-item"><input type="checkbox" class = 'item' name="park" value="park"> &nbsp Park</li>
+              <li class="list-group-item"><input type="checkbox" class = 'item' name="hiking" value="hiking"> &nbsp Hiking Trails</li>
+              <li class="list-group-item"><input type="checkbox" class = 'item' name="tourist" value="tourist"> &nbsp Tourist Locations</li>
+              <li class="list-group-item"><input type="checkbox" class = 'item' name="beach" value="beach"> &nbsp Beach</li><br>
+            </ul>
+          </div>
+          <button type="submit" id = 'sub' class="btn btn-warning btn-lg">SUBMIT</button>
+      </div>
+      </form>
+    </div>
+
+
+    <div id = 'side'>
+      <p>ANNE IS THE COOLEST PERSON EVER WOO I LOVE HER ** ANNE IS THE COOLEST PERSON EVER WOO I LOVE HER ** ANNE IS THE COOLEST PERSON EVER WOO I LOVE HER ** ANNE IS THE COOLEST PERSON EVER WOO I LOVE HER</p>
+    </div>
+
+
+</div>
   </body>
 </html>
