@@ -41,7 +41,10 @@ article {
     margin-left: 170px;
     padding: 1em;
     overflow: hidden;
-    color: #FFE4B5
+    color: #FFE4B5;
+}
+p{
+  color: #FFE4B5;
 }
 body h1 {
   font-family: 'Poiret One';
@@ -49,14 +52,16 @@ body h1 {
   color: #DE8B2C;
   background-color: #404040;
 }
-
+body {
+  background-color: #404040;
+}
 .navbar-default {
   background-color: #FFC259;
   border-color: #FFE4B5;
 }
 /* Title */
 .navbar-default .navbar-brand {
-    /*color: #FFF1D9;*/
+    color: #FFF1D9;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
