@@ -14,13 +14,33 @@ html {
 }
 
 .container {
-  background-color: #404040
+  background-color: #404040;
 }
 
+.big{
+  width: 70%
+}
+
+#side {
+  width: 250px;
+  height: 450px;
+  background-color: white;
+  margin-top: -391px;
+  margin-left: 890px;
+  float: inherit;
+  border-radius: 15px;
+  opacity: 0.8
+  /*display: inline-block;*/
+}
+
+.wrapper {
+  width: 1200px;
+  margin: auto;
+}
 
 .active{
   font-family: 'Poiret One';
-  font-size: 25px;
+  font-size: 30px;
   color: #FFE4B5;
 }
 .door{
@@ -36,5 +56,5 @@ html {
 .bar{
   font-family: 'Poiret One';
   font-weight: bold;
-  font-size: 17px;
+  font-size: 20px;
 }
