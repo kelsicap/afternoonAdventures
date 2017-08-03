@@ -42,9 +42,9 @@ class MainHandler(webapp2.RequestHandler):
                 'Volunteer Park', 'Bellevue Botanical Garden']
         beach = ['Alki Beach', 'Juanita Beach Park', 'Golden Gardens Park',
                     'Gene Coulon Beach Park', 'Newcastle Beach Park']
-        hike = ['Rattlesnake Lake', 'Poo Poo Point', 'Cougar Mountain']
+        hike = ['Rattlesnake Lake', 'Poo Poo Point', 'Cougar Mountain', 'Lake 22']
         tourist = ['Space Needle', 'Pike Place Market', 'Seattle Waterfront',
-                    'Gum Wall']
+                    'Gum Wall', 'Fremont Troll']
 
         activities = {}
 
