@@ -58,7 +58,8 @@
       <h1> Here's a list of recommended activities! Have fun adventuring!</h1>
         {% for activity in activities %}
           <h3><div id='activity'>{{ activity }}:</h3> </div>
-          <div id= 'item'> {{activities[activity]}} </div><br>
+          <div id= 'item'> {{activities[activity]}}</div><br>
+          <div id = 'address'> If you are unsure of the address, feel free to look it up!</div>
         {% endfor %}
 
           <div id="map"></div>
@@ -78,7 +79,7 @@
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
       function initMap() {
        var map = new google.maps.Map(document.getElementById('map'), {
-         center: {lat: -33.8688, lng: 151.2195},
+         center: {lat: 47.628538, lng: -122.202760},
          zoom: 13
        });
 
@@ -99,16 +100,13 @@
          infowindow.open(map, marker);
        });
 
-<<<<<<< HEAD
+
        autocomplete.addListener('place_changed', function() {
          infowindow.close();
          var place = autocomplete.getPlace();
          if (!place.geometry) {
            return;
          }
-=======
-
->>>>>>> 6ec9bd5b1d1a8852f9218aaf794e8257f277d6d5
 
          if (place.geometry.viewport) {
            map.fitBounds(place.geometry.viewport);
