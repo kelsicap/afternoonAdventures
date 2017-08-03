@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    color: #404040;
+    color: #FFC259;
     font-weight: 900;
     text-shadow: -0.3px 0 #FFE4B5, 0 0.3px #FFE4B5, 0.3px 0 #FFE4B5, 0 -0.3px #FFE4B5;
     font-family: 'Poiret One';
@@ -64,7 +64,7 @@ h1{
 }
 
 h4 {
-  color: #404040;
+  color: #FFC259;
   font-size: 25px;
   text-align: center;
   font-weight: normal;
@@ -96,7 +96,8 @@ h3 {
     width: 40%;
     height: 50%;
     float: left;
-    margin: 10px;;
+    margin: 10px;
+    background-color: #474747
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -114,11 +115,17 @@ h3 {
   color: #FF7F50;
 }
   /* Optional: Makes the sample page fill the window. */
-html, body {
+html{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url('https://www.walldevil.com/wallpapers/a21/sunset-sky-cloud-sea-mountain.jpg');
+    background-image: url('http://natbg.com/wp-content/uploads/2016/09/sunsets-sailboat-golden-sunset-zakat-ozero-lodka-peyzazh-nature-gold-sun-sky-sunsets-full-hd-wallpaper-1920x1080.jpg');
+  }
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #404040
   }
 
 .navbar-default {
