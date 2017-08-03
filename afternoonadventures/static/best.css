@@ -1,14 +1,19 @@
 html {
-  background-color: #404040;
+  background-image: url('http://natbg.com/wp-content/uploads/2016/09/sunsets-sailboat-golden-sunset-zakat-ozero-lodka-peyzazh-nature-gold-sun-sky-sunsets-full-hd-wallpaper-1920x1080.jpg');
+
 }
 div.container {
     width: 100%;
     background-color: #404040;
+    height: 100%
 }
 .container{
-  width: 100%;
-  background-color: #404040;
+  height: 100%
 }
+body{
+  height:100%
+}
+
 header{
     padding: 1em;
     color: #404040;
