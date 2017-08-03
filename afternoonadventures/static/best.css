@@ -36,10 +36,16 @@ article {
     overflow: hidden;
     color: #FFE4B5;
 }
+p{
+  color: #FFE4B5;
+}
 body h1 {
   font-family: 'Poiret One';
   font-weight: bold;
   color: #DE8B2C;
+  background-color: #404040;
+}
+body {
   background-color: #404040;
 }
 .navbar-default {
